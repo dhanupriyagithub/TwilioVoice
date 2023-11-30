@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make a Call</title>
+</head>
+<body>
+    <h1>Make a Call</h1>
+    <form method="post" action="{% url 'upload_audio' %}">
+        {% csrf_token %}
+        <label for="phone_number">Phone Number to Call:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+
+        <label for="question1">Question 1:</label>
+        <input type="text" id="question1" name="question1" required>
+
+        <label for="question2">Question 2:</label>
+        <input type="text" id="question2" name="question2" required>
+
+        <label for="question3">Question 3:</label>
+        <input type="text" id="question3" name="question3" required>
+
+        <label for="call_time">Set Call Time:</label>
+        <input type="time" id="call_time" name="call_time" required>
+
+        <button type="submit">Call</button>
+    </form>
+</body>
+</html>
+
+
+    
+
+
